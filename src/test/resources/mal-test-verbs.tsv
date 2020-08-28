@@ -1,0 +1,34 @@
+u.n.t^u|PST&NEG	u.n.t|aayirunnu
+u.n.t^u|PST	u.n.t|aayi
+u.n.t^u	u.n.t^u
+
+vee.nuka&PRS&NEG	vee.n.ta
+vee.nuka&PRS	vee.na;m
+
+pookuka|INF	pook|uka
+pookuka|PRS	pook|unnu
+pookuka|NEG	pook|illa
+pookuka|HAB&NEG	pook|ukayilla
+pookuka|HAB	pook|u;m
+pookuka|INT&NEG	pook|ukayilla
+pookuka|INT	pook|aa;m
+pookuka|GER	pook|aan
+pookuka|IMP	pook|uu
+pookuka|DES&NEG|PST	pook|a.n.t|aayirunnu
+pookuka|DES|PST	pook|a.nam|aayirunnu
+pookuka|DES&NEG	pook|a.n.ta
+pookuka|DES	pook|a.na;m
+pookuka|PAM	pook|alloo
+pookuka|NEG|PAM	pook|all|alloo
+pookuka|HOR	pook|aa;m
+
+kaa.nuka{pst=tu}|PST|STAT|NEG	ka.n|.t|i.t.t|illa
+kaa.nuka{pst=tu}|PRS|NEG	kaa.n|unn|illa
+kaa.nuka{pst=tu}|HOR|NEG	kaa.n|aam|illa
+kaa.nuka{pst=tu}|PRS|A	kaa.n|unn|a
+kaa.nuka{pst=tu}|PST|A	ka.n|.t|a
+
+ki.t.tuka{pst=i}|PST|STAT|NEG	ki.t.t|i|yi.t.t|illa
+ki.t.tuka{pst=i}|PRS|NEG	ki.t.t|unn|illa
+ki.t.tuka{pst=i}|PRS|A	ki.t.t|unn|a
+ki.t.tuka{pst=i}|PST|A	ki.t.t|i|ya

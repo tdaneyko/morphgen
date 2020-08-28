@@ -1,0 +1,9 @@
+[N] (PC || PL) (ABS || ERG || GEN || VOC || ADE || ALL || ABL || PRE || INE || ILL || ELA || TRA || SUP || SUPDI || SUPEL || SUPTR || SUB || SUBDI || SUBEL || SUBTR || INS || COM || ABE || CAU || TER || TOP || TMP)
+
+[PRN] (ABS || ERG || GEN || VOC || ADE || ALL || ABL || PRE || INE || ILL || ELA || TRA || SUP || SUPDI || SUPEL || SUPTR || SUB || SUBDI || SUBEL || SUBTR || INS || COM || ABE || CAU || TER || TOP || TMP)
+
+OPT [VART] (SBJ || OBL || CMS || PERM)
+
+(APPL&ESS || APPL&DIR || APPL&LAT || APPL&TRA) [V!] PST (AFF:fear || AFF:joy || AFF:sad || AFF:regret || AFF:hopeful || AFF:longing || AFF:dissatisfied || AFF:disgust || AFF:amused || AFF:pleased || AFF:angry || AFF:admiring || AFF:determined || AFF:shock || AFF:curious) PASS (ADE || ALL || ABL || INE || ILL || ELA || INS || COM || ABE || CAU || TER || TMP) (REL&P || REL&A || ARG&FAC&P || ARG&FAC&A || ARG&INT&P || ARG&INT&A)
+
+[V] PST

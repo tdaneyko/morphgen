@@ -1,0 +1,312 @@
+#def	#V	[aa ai au ee ii oo uu a e i o u]
+#def	#VV	[aa ai au ee ii oo uu]
+#def	#C	[_t _r r _l .l l y v ;s .s s h kh gh ch jh .th .dh th dh ph bh k g c j .t .d t d p b ;n ~n .n n m]
+
+#def	#cl	[{cl=hum} {cl=nhum}]
+#def	#pst	[{pst=i} {pst=tu}]
+
+#def	#sep	[| & <>]
+#def	#case	[GEN DAT ACC SOC LOC]
+
+
+// -----
+// NOUNS
+// -----
+
+// Plural
+
+[*];m{cl=nhum}|PL	[1];n|;na.l
+[*]^u{cl=nhum}|PL	[1]u|ka.l
+[*]v^u{cl=nhum}|PL	[1]k|ka.l
+[*]u{cl=nhum}|PL	[1]uk|ka.l
+[*]{cl=nhum}|PL	[1]|ka.l
+// Human nouns only:
+[*][!aa ,r]{cl=hum}|PL	[1][2]k|ka.l
+[*]v^u{cl=hum}|PL	[1]k|kanmaar
+[*]{cl=hum}|PL	[1]|maar
+
+[*];m|PL	[1];n|;na.l || [1]m|maar
+[*]v^u|PL	[1]k|ka.l || [1]k|kanmaar
+// ??? (check maar variant)
+[*]^u|PL	[1]u|ka.l || [1]|maar
+[*]u|PL	[1]uk|ka.l || [1]u|maar
+[*][!aa ,r]|PL	[1][2]k|ka.l || [1][2]|ka.l || [1][2]|maar
+[*]|PL	[1]|ka.l || [1]|maar
+
+
+// Case
+[*][#cl][#sep][#case]	[1][3][4]
+[*][#cl]	[1]
+
+[*]&NOM	[1]
+
+#~naan|GEN	en|_re
+#~naan|DAT	en|ikk^u
+#~naan|ACC	enn|e
+#~naan|SOC	enn|oo.t^u
+#~naan|LOC	enn|il
+#~naan|INS	enn|aal
+
+#naam|GEN	namm|u.te
+#naam|DAT	namm|ukk^u || nam|ukk^u
+#naam|ACC	namm|e
+#naam|SOC	namm|oo.t^u
+#naam|LOC	namm|il
+#naam|INS	namm|aal
+
+#nii|GEN	nin|_re
+#nii|DAT	ninn|akk^u || nin|akk^u
+#nii|ACC	ninn|e
+#nii|SOC	ninn|oo.t^u
+#nii|LOC	ninn|il
+#nii|INS	ninn|aal
+
+#taan|GEN	tan|_re
+#taan|DAT	tann|ikk^u || tan|ikk^u
+#taan|ACC	tann|e
+#taan|SOC	tann|oo.t^u
+#taan|LOC	tann|il
+#taan|INS	tann|aal
+
+[*]^u|GEN	[1]|in_re
+[*]u|GEN	[1]u|vin_re
+[*];m|GEN	[1]tt|in_re
+[*][!. _]l|GEN	[1][2]l|u.te
+[*][!l r]|GEN	[1][2]|in_re
+[*]n|GEN	[1]n|_re
+[*]ee|GEN	[1]ee|yyu.te
+[*][#V]|GEN	[1][2]|yu.te
+[*]|GEN	[1]|u.te
+
+[*]^u|DAT	[1]|in^u
+[*]u|DAT	[1]u|vin^u
+[*];m|DAT	[1]tt|in^u
+[*][!. _]l|DAT	[1][2]l|kk^u
+[*][!l r]|DAT	[1][2]|in^u
+[*]n|DAT	[1]n|^u
+[*]|DAT	[1]|kk^u
+
+[*] ACC	[1] {cl=hum}ACC || [1] {cl=nhum}ACC
+[*]&[?{cl=nhum}]ACC	[1]
+[*]^u|[?{cl=hum}]ACC	[1]|ine
+[*]u|[?{cl=hum}]ACC	[1]u|vine
+[*];m|[?{cl=hum}]ACC	[1]tt|ine
+[*][!. _]l|[?{cl=hum}]ACC	[1][2]l|e
+[*]l|[?{cl=hum}]ACC	[1]l|ine
+[*][#V]|[?{cl=hum}]ACC	[1][2]|ye
+[*]|[?{cl=hum}]ACC	[1]|e
+{cl=[?n]hum}	
+
+[*]^u|SOC	[1]|inoo.t^u
+[*]u|SOC	[1]u|vinoo.t^u
+[*];m|SOC	[1]tt|inoo.t^u
+[*][!. _]l|SOC	[1][2]l|oo.t^u
+[*]l|SOC	[1]l|inoo.t^u
+[*][#V]|SOC	[1][2]|yoo.t^u
+[*]|SOC	[1]|oo.t^u
+
+[*] LOC	[1] {loc=^u}LOC || [1] {loc=il}LOC
+[*][!.t _r]^u|[?{loc=il}]LOC	[1][2][2]|il
+[*][!.t _r]^u&[?{loc=^u}]LOC	[1][2][2]^u
+[*]^u|[?{loc=il}]LOC	[1]|il
+[*]u|[?{loc=il}]LOC	[1]u|vil
+[*];m|[?{loc=il}]LOC	[1]tt|il
+[*];m&[?{loc=^u}]LOC	[1]tt^u
+[*][#V]|[?{loc=il}]LOC	[1][2]|yil
+[*]|[?{loc=il}]LOC	[1]|il
+{loc=[!il ^u]}	
+
+[*]^u|INS	[1]|inaal
+[*]u|INS	[1]u|vinaal
+[*];m|INS	[1]tt|inaal
+[*][!. _]l|INS	[1][2]l|aal
+[*]l|INS	[1]l|inaal
+[*][#V]|INS	[1][2]|yaal
+[*]|INS	[1]|aal
+
+
+// -----
+// VERBS
+// -----
+
+//Passive
+
+[*]uka|PASS[#sep][*]	[1]a|ppe.tuka[2][3]
+[*]uka|PASS [*]	[1]a|ppe.tuka [2]
+
+// Exceptions
+
+#aa.n^u|PAM	aa.n|alloo
+
+#u.n.t^u|PST&NEG	u.n.t|aayirunnu
+#u.n.t^u&PST&NEG	illaayirunnu
+#u.n.t^u|PST	u.n.t|aayi
+#u.n.t^u&NEG	alla
+#u.n.t^u|FUT	u.l.l|uu
+#u.n.t^u|A	u.l.l|a
+#u.n.t^u|Nn	u.l.l|at^u
+#u.n.t^u|PAM	u.n.t|alloo
+
+//aayirikkuka&PST	aayirunnu
+aayirikkuka&PST&NEG	allaayirunnu
+
+#vee.nuka&PRS&NEG	vee.n.ta
+#vee.nuka&PRS	vee.na;m
+
+// Various
+
+[*]uka[?#pst]|INF	[1]|uka
+[*]uka[?#pst]|PRS	[1]|unnu
+[*]uka[?#pst]|FUT&NEG	[1]|ukayilla
+[*]uka[?#pst]|FUT	[1]|u;m
+[*]uka[?#pst]|HAB&NEG	[1]|ukayilla
+[*]uka[?#pst]|HAB	[1]|u;m
+[*]uka[?#pst]|INT&NEG	[1]|ukayilla
+[*]uka[?#pst]|INT	[1]|aa;m
+[*]uka[?#pst]|POT	[1]|aa;m
+[*]uka[?#pst]|GER	[1]|aan
+[*]uka[?#pst]|IMP	[1]|uu
+[*]uka[?#pst]|DES&NEG|PST	[1]|a.n.t|aayirunnu
+[*]uka[?#pst]|DES|PST	[1]|a.nam|aayirunnu
+[*]uka[?#pst]|DES&NEG	[1]|a.n.ta
+[*]uka[?#pst]|DES	[1]|a.na;m
+[*]uka[?#pst]|NEG|PAM	[1]|all|alloo
+[*]uka[?#pst]|PAM	[1]|alloo
+[*]uka[?#pst]|HOR	[1]|aa;m
+[*]uka[?#pst]|PERM	[1]|a.t.te
+
+// Past participle
+
+[*]|PSTPART	[*]|PST&STAT
+
+// Past tense
+
+aakuka[?#pst]|PST	aay|i
+[*]pookuka[?#pst]|PST	[1]pooy|i
+[*]irikkuka[?#pst]|PST	[1]irun|nu
+[*][#sep]ppe.tuka[?#pst]|PST	[1][2]ppe.t|.tu
+
+[*]uka{pst=i}|PST	[1]|i
+[*]{pst=tu}|PST	[1]{pst=tu}|PST
+[*]uka|PST	[1]uka{pst=tu}|PST || [1]|i
+
+#[?#C][#V]_luka{pst=tu}|PST	[1][2]_l|tu || [1][2]_l|.nu
+[*]_luka{pst=tu}|PST	[1]_l|.nu
+
+#[?#C][#V]yyuka{pst=tu}|PST	[1][2]y|tu
+
+#[?#C][#V]_ruka{pst=tu}|PST	[1][2]_r|_ru
+
+#[#C][#V]ruka{pst=tu}|PST	[1][2]r|tu || [1][2].n|.tu || [1][2]n|nu
+[*]ruka{pst=tu}|PST	[1]n|nu
+
+[*].n.nuka{pst=tu}|PST	[1].n|.tu
+#[#C]aa.nuka{pst=tu}|PST	[1]a.n|.tu
+#[#C]ee.nuka{pst=tu}|PST	[1]e.n|.tu
+#[#C]ii.nuka{pst=tu}|PST	[1]i.n|.tu
+#[#C]oo.nuka{pst=tu}|PST	[1]o.n|.tu
+#[#C]uu.nuka{pst=tu}|PST	[1]u.n|.tu
+
+#[?#C][#V].tuka{pst=tu}|PST	[1][2].t|.tu
+
+[*]yuka{pst=tu}|PST	[1]~n|~nu
+[*][!i ee]uka{pst=tu}|PST	[1][2]~n|~nu
+[*].luka{pst=tu}|PST	[1].n|.tu
+[*]luka{pst=tu}|PST	[1]n|nu
+
+[*]akkuka{pst=tu}|PST	[1]an|nu || [1]at|tu
+[*][!u r]kkuka{pst=tu}|PST	[1][2]t|tu
+[*].lkkuka{pst=tu}|PST	[1].t|.tu
+[*]lkkuka{pst=tu}|PST	[1]_r|_ru || [1]n|nu
+[*][!e i]kkuka{pst=tu}|PST	[1][2]c|cu
+[*]ykkuka{pst=tu}|PST	[1]c|cu
+
+// Stative perfect
+
+[!aay pooy]|i&STAT	[1]|i.t.t^u
+
+[*] STAT	[1] {prf=itt}STAT || [1] {prf=^u}STAT
+
+[*]|i|[?{prf=itt}]STAT	[1]|i|yi.t.t^u
+[*]u|[?{prf=itt}]STAT	[1]|i.t.t^u
+[*]u&[?{prf=^u}]STAT	[1]^u
+
+{prf=[!itt ^u}}	
+
+// Adjective
+
+[*][!^u u]|A	[1]|a
+[*]|i|A	[1]|i|ya
+
+// Verbal/Adjectival noun
+
+[!aa poo]y|i|N[!n m f hum]	[1]|yu|N[2]
+
+[*][!a ^u u]|Nn&PL	[1]|ava
+[*]|i|Nn&PL	[1]|i|yava
+[*][!a ^u u]|Nhum&PL	[1]|avar
+[*]|i|Nhum&PL	[1]|i|yavar
+
+[*][!a ^u u]|Nn	[1]|at^u
+[*]|i|Nn	[1]|i|yat^u
+[*][!a ^u u]|Nm	[1]|avan
+[*]|i|Nm	[1]|i|yavan
+[*][!a ^u u]|Nf	[1]|ava.l
+[*]|i|Nf	[1]|i|yava.l
+
+[*]e|Nn	[1]e|t^u
+
+// Negation
+
+[*]uka[?#pst]|NEG	[1]|illa
+[*][?#sep]^u|NEG	[1][2]|illa
+[*][?#sep]u|NEG	[1][2]|illa
+[*][?#sep][#V]|NEG	[1][2][3]|yilla
+[*];m|NEG	[1]m|illa
+[*]|NEG	[1]|illa
+
+[*][?#sep]illa|QPRT	[1][2]ill|ee
+
+// Polite assertive marker
+
+[*][!a ^u u]|PAM	[1]|alloo
+
+
+// --------
+// NUMERALS
+// --------
+
+[*][?#sep]*100[*][?#sep]*10[*]	[1][2]*100*[3][4]*10*[5]
+[*][?#sep]*10[?*][*]	[1][2]*10*[4]
+[*][?#sep]*10*0[?*][*]	[1][2]*100*[4]
+
+[*][?#sep]+2|*10*[*]	[1][2]iru|*10*[3]
+[*][?#sep]+3|*10*[*]	[1][2]mu|p*10*[3]
+[*][?#sep]+4|*10*[*]	[1][2]naal|*10*[3] || [1][2]naa|p*10*[3]
+[*][?#sep]+5|*10*[*]	[1][2]an|*10*[3] || [1][2]am|*10*[3]
+[*][?#sep]+6|*10*[*]	[1][2]a_ru|*10*[3]
+[*][?#sep]+7|*10*[*]	[1][2]e_lu|*10*[3]
+[*][?#sep]+8|*10*[*]	[1][2]e.n|*10*[3] || [1][2]em|*10*[3]
+[*][?#sep]+9&*10*[*]	[1][2]to.n.*100*[3]
+
+[*][?#sep]*10*|[#V][*]	[1][2]patti|y[3][4] || [1][2]patt|[3][4]
+[*][?#sep]*10*|[#C][*]	[1][2]patti|[3][4] || [1][2]pat|[3][4]
+
++1&*100*[*]	*100*[1]
++2|*100*[*]	iru|*100*[1]
++3|*100*[*]	mun|*100*[1]
++4|*100*[*]	naa|*100*[1]
++5|*100*[*]	a~n|~*100*[1]
++6|*100*[*]	a_ra|*100*[1]
++7|*100*[*]	e_lu|*100*[1]
++8|*100*[*]	e.n|.*100*[1]
++9&*100*[*]	to.l.laayira;m[1]
+
+[*][?#sep]*100*|[#V][*]	[1][2]nuu_r_ri|y[3][4] || [1][2]nuu_r_r|[3][4]
+[*][?#sep]*100*|[!p t][*]	[1][2]nuu_r_ri|[3][3][4] || [1][2]nuu_r_r|[3][4]
+[*][?#sep]*100*|[#C][*]	[1][2]nuu_r_ri|[3][4] || [1][2]nuu_r_r|[3][4]
+
+[*][?#sep]*100*[?#sep][*]	[1][2]nuu_r^u[3][4]
+[*][?#sep]*10*[?#sep][*]	[1][2]patt^u[3][4]
+
++[!1 2 3 4 5 6 7 8 9]	|NEG|

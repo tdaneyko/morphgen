@@ -1,0 +1,335 @@
+#def	#V	[a e o u y an en on un yn aj ej oj uj aw ew ow ja je jo ju wa we wo]
+#def	#1V	[a e o u y]
+#def	#2V	[an en on un yn aj ej oj uj aw ew ow ja je jo ju wa we wo]
+
+#def	#C	[kh th ph sh h k t p r q g d b l]
+#def	#earth	[k t p r q]
+#def	#water	[g d b l]
+#def	#wind	[kh th ph sh h]
+#def	#velar	[kh g k]
+#def	#dental	[th d t]
+#def	#labial	[ph b p]
+#def	#alveo	[sh r l]
+#def	#glottal	[q h]
+
+#def	#sep	[| & < > <>]
+
+#def	#case	[ABS ERG GEN VOC ADE ALL ABL PRE INE ILL ELA TRA SUP SUPDI SUPEL SUPTR SUB SUBDI SUBEL SUBTR INS COM ABE CAU TER TOP TMP]
+#def	#vcase	[SUB SUBDI SUBEL SUBTR INS COM ABE CAU TER TMP]
+#def	#ccase	[GEN VOC ADE ALL ABL PRE INE ILL ELA TRA SUP SUPDI SUPEL SUPTR TOP]
+
+
+// Undo metathesis before affixes
+
+[stem][!r l]n[!| <>]	[stem]n[1][2]
+
+
+
+// Verbal articles (mood)
+
+#dal<>SBJ	da<j>l
+#khen|SBJ	khe|j
+
+OPT|[!dal khen]#	qje|[1]
+
+#dal&OBL	tal || tallak
+#khen&OBL	ken || kenpak
+
+#dal|CMS	dal|u
+#khen|CMS	kheb|u
+
+#dal|PERM	dal|yn
+#khen|PERM	kheb|yn
+
+// Past tense
+
+[stem]j[#1V][#C]<>PST	[stem]y<n>[2]
+[stem]w[#1V][#C]<>PST	[stem]u<n>[2]
+[stem]j[#1V]|PST	[stem]y|n
+[stem]w[#1V]|PST	[stem]u|n
+
+[stem][#1V][!j w][#C]<>PST	[stem][1]<n>[3]
+[stem][#1V][!j w]|PST	[stem][1]|n
+
+[stem][#1V]n[#C]|PST	[stem][1]n[2]|an
+[stem][#1V]n|PST	[stem][1]b|an
+
+[stem][#1V][#C]<>PST	[stem][1]<n>[2]
+[stem][#1V]|PST	[stem][1]|n
+
+// Affect
+
+[stem][#C][#V][#C]<>AFF:fear	[stem][1][2]<[1][2]ka>[3]
+[stem][#C][#V]|AFF:fear	[stem][1][2]|[1][2]ka
+[stem][#V][#C]<>AFF:joy	[stem][1]<bala>[2]
+[stem][#V]|AFF:joy	[stem][1]|bala
+[stem][#V][#C]<>AFF:sad	[stem][1]<bbu>[2]
+[stem][#V]|AFF:sad	[stem][1]|bbu
+[stem][#V][#C]<>AFF:regret	[stem][1]<be>[2]
+[stem][#V]|AFF:regret	[stem][1]|be
+[stem][#V][#C]<>AFF:hopeful	[stem][1]<ddy>[2]
+[stem][#V]|AFF:hopeful	[stem][1]|ddy
+[stem][#V][#C]<>AFF:longing	[stem][1]<e>[2]
+[stem][#V]|AFF:longing	[stem][1]|e
+[stem][#V][#C]<>AFF:dissatisfied	[stem][1]<ga>[2]
+[stem][#V]|AFF:dissatisfied	[stem][1]|ga
+[stem][#V][#C]<>AFF:disgust	[stem][1]<khu>[2]
+[stem][#V]|AFF:disgust	[stem][1]|khu
+[stem][#V][#C]<>AFF:amused	[stem][1]<kja>[2]
+[stem][#V]|AFF:amused	[stem][1]|kja
+[stem][#V][#C]<>AFF:pleased	[stem][1]<le>[2]
+[stem][#V]|AFF:pleased	[stem][1]|le
+[stem][#V][#C]<>AFF:angry	[stem][1]<po>[2]
+[stem][#V]|AFF:angry	[stem][1]|po
+[stem][#V][#C]<>AFF:admiring	[stem][1]<qu>[2]
+[stem][#V]|AFF:admiring	[stem][1]|qu
+[stem][#V][#C]<>AFF:determined	[stem][1]<ro>[2]
+[stem][#V]|AFF:determined	[stem][1]|ro
+[stem][#V][#C]<>AFF:shock	[stem][1]<she>[2]
+[stem][#V]|AFF:shock	[stem][1]|she
+[stem][#V][#C]<>AFF:curious	[stem][1]<ttha>[2]
+[stem][#V]|AFF:curious	[stem][1]|ttha
+
+// Applicative & Passive
+
+[stem][#C]|PASS	[stem][1]|eppe
+[stem]|PASS	[stem]|ppe
+
+APPL&ESS|[#V][stem]	ynb|[1][stem]
+APPL&ESS|[stem]	yn|[stem]
+
+APPL&DIR|[#water][stem]	wol|[1][stem]
+APPL&DIR|[#wind][stem]	wos|[1][stem]
+APPL&DIR|[stem]	wor|[stem]
+
+APPL&LAT|[#wind][stem]	les|[1][stem]
+APPL&LAT|[#earth][stem]	ler|[1][stem]
+APPL&LAT|[#water][stem]	lel|[1][stem]
+APPL&LAT|[stem]	lesh|[stem]
+
+APPL&TRA|[#earth][stem]	qak|[1][stem]
+APPL&TRA|[#wind][stem]	qak|[1][stem]
+APPL&TRA|[stem]	qag|[stem]
+
+// NUMBER
+
+// Paucal
+
+[stem][#C][#1V][?n j w][#C]<>PC	[stem][1][2]<[1][2]>[3][4]
+[stem][#C][#1V][!n j w]<>PC	[stem][1][2]<[1][2]>[3]
+[stem][#C][#1V]|PC	[stem][1][2]|[1][2]
+[stem][#C]j[#1V][#C]<>PC	[stem][1]y<[1]j>[2][3]
+[stem][#C]w[#1V][#C]<>PC	[stem][1]u<[1]w>[2][3]
+[stem][#C]j[#1V]<>PC	[stem][1]y<[1]j>[2]
+[stem][#C]w[#1V]<>PC	[stem][1]u<[1]w>[2]
+
+[stem][#V][?j w][#1V][#C]|PC	[stem][1][2][3][4]|[3][4]
+[stem][#V][#1V]j[#C]|PC	[stem][1][2]j[3]|y[3]
+[stem][#V][#1V]w[#C]|PC	[stem][1][2]w[3]|u[3]
+[stem][#V][#1V]n[#C]|PC	[stem][1][2]n[3]|[2][3]
+[stem][#V][?j w][#1V]|PC	[stem][1][2][3]|[3]k
+[stem][#V][#1V]j|PC	[stem][1][2]j|yk
+[stem][#V][#1V]w|PC	[stem][1][2]w|uk
+[stem][#V][#1V]n|PC	[stem][1][2]n|[2]k
+
+// Plural
+
+[stem][#velar][#V]|PL	[stem][1][2]|kh
+[stem][#dental][#V]|PL	[stem][1][2]|th
+[stem][#labial][#V]|PL	[stem][1][2]|ph
+[stem][#alveo][#V]|PL	[stem][1][2]|sh
+[stem][#glottal][#V]|PL	[stem][1][2]|kh
+[stem][#V][#V]|PL	[stem][1][2]|kh
+[stem][#velar]&PL	[stem]kh
+[stem][#dental]&PL	[stem]th
+[stem][#labial]&PL	[stem]ph
+[stem][#alveo]&PL	[stem]sh
+
+// CASE
+
+// Absolutive and Ergative
+
+[stem]&ABS	[stem]
+
+#korej[?sh]&ERG	kory[1]
+#[?ko]kow[!l sh]&ERG	[1]ky[2]
+#lo&ERG	ly
+#tash&ERG	tesh
+#tej&ERG	ty
+#qe[?k kh]&ERG	qy[1]
+#khej[!t th]&ERG	khy[1]
+#[?khe]khe[!l sh]&ERG	[1]khy[2]
+#[?he]hew[!p ph]&ERG	[1]hy[2]
+
+[stem]j[!a e o u][#C]<>ERG	[stem]<y>[2]
+[stem]w[!a e o][#C]<>ERG	[stem]u<j>[2]
+[stem][!a e o u]j[#C]<>ERG	[stem]<y>[2]
+[stem][!a e o u][!w n][#C]<>ERG	[stem][1]<j>[3]
+[stem][!a e o u][#C]<>ERG	[stem][1]<j>[2]
+[stem]y[#C]<>ERG	[stem]<aj>[1]
+[stem]j[!a e o u]|ERG	[stem]|y
+[stem]w[!a e o]|ERG	[stem]u|j
+[stem][!a e o u]j|ERG	[stem]|y
+[stem][!a e o u][!w n]|ERG	[stem][1]|j
+[stem][!a e o u]|ERG	[stem][1]|j
+[stem]y|ERG	[stem]|aj
+
+// Pronoun bases
+
+#korej[#sep][#case]	kory[1][2]
+#korejsh[#sep][#vcase]	koryh[1][2]
+#korejsh[#sep][#ccase]	korysh[1][2]
+#kowl[#sep][#case]	kul[1][2]
+#kokowl[#sep][#case]	kokul[1][2]
+#kowsh[#sep][#vcase]	kuh[1][2]
+#kowsh[#sep][#ccase]	kush[1][2]
+#tash[#sep][#vcase]	tah[1][2]
+#tej[#sep][#case]	ty[1][2]
+#bowt[#sep][#case]	but[1][2]
+#qek[#sep][#vcase]	qeq[1][2]
+#qekh[#sep][#vcase]	qeh[1][2]
+#khejt[#sep][#case]	khyt[1][2]
+#khejth[#sep][#vcase]	khyh[1][2]
+#khejth[#sep][#ccase]	khyth[1][2]
+#khesh[#sep][#vcase]	kheh[1][2]
+#hewp[#sep][#case]	hyp[1][2]
+#hehewp[#sep][#case]	hehyp[1][2]
+#hewph[#sep][#vcase]	hyh[1][2]
+#hewph[#sep][#ccase]	hyph[1][2]
+
+#pek[#sep][#vcase]	pe[1][2]
+#pek[#sep][#ccase]	pek[1][2]
+#pepek[#sep][#vcase]	peq[1][2]
+#pepek[#sep][#ccase]	pekk[1][2]
+#pekh[#sep][#vcase]	peh[1][2]
+#pak[#sep][#vcase]	pa[1][2]
+#pak[#sep][#ccase]	pak[1][2]
+#papak[#sep][#vcase]	paq[1][2]
+#papak[#sep][#ccase]	pakk[1][2]
+#pakh[#sep][#vcase]	pah[1][2]
+
+// Genitive and Vocative
+
+#qe&GEN	qa
+[stem][#2V]|GEN	[stem][1]|ta
+[stem]a|GEN	[stem]a|ta
+[stem][!e y]|GEN	[stem]j|a
+[stem][!o u]|GEN	[stem]w|a
+
+[stem]e&VOC	[stem]e
+[stem]|VOC	[stem]|e
+[stem]e|e	[stem]e|VOC
+
+// Local case
+
+|SU[!P B]#	|SU[1]ES
+|SU[!P B][#sep]	|SU[1]ES[2]
+
+[stem][?#sep][#C]|ADE	[stem][1][2]|y
+[stem]|ADE	[stem]|py
+[stem][?#sep][#C]|ALL	[stem][1][2]|ur
+[stem]|ALL	[stem]|por
+[stem][?#sep][#C]|ABL	[stem][1][2]|esh
+[stem]|ABL	[stem]|pesh
+[stem][?#sep][#C]|PRE	[stem][1][2]|wa
+[stem]|PRE	[stem]|pa
+
+[stem][?#sep][#C]|INE	[stem][1][2]|er
+[stem]|INE	[stem]|ry
+[stem][?#sep][#C]|ILL	[stem][1][2]|or
+[stem]|ILL	[stem]|ror
+[stem][?#sep][#C]|ELA	[stem][1][2]|esh
+[stem]|ELA	[stem]|resh
+[stem][?#sep][#C]|TRA	[stem][1][2]|era
+[stem]|TRA	[stem]|ra
+
+[stem][?#sep][#C]|SUPES	[stem][1][2]|atyn
+[stem]|SUPES	[stem]|tyn
+[stem][?#sep][#C]|SUPDI	[stem][1][2]|ator
+[stem]|SUPDI	[stem]|tor
+[stem][?#sep][#C]|SUPEL	[stem][1][2]|atesh
+[stem]|SUPEL	[stem]|tesh
+[stem][?#sep][#C]|SUPTR	[stem][1][2]|ata
+[stem]|SUPTR	[stem]|ta
+
+[stem]q|SUBES	[stem]k|kyn
+[stem]|SUBES	[stem]|kyn
+[stem]q|SUBDI	[stem]k|kur
+[stem]|SUBDI	[stem]|kur
+[stem]q|SUBEL	[stem]k|kwesh
+[stem]|SUBEL	[stem]|kwesh
+[stem]q|SUBTR	[stem]k|kwa
+[stem]|SUBTR	[stem]|kwa
+
+// Dubious case
+
+[stem][#water]|INS	[stem][1]|dje
+[stem][?k t s p]h|INS	[stem][1]|thje
+[stem]q|INS	[stem]t|tje
+[stem][?#earth]|INS	[stem][1]|tje
+
+[stem][#water]|COM	[stem][1]|ban
+[stem][?k t s p]h|COM	[stem][1]|phan
+[stem]q|COM	[stem]p|pan
+[stem][?#earth]|COM	[stem][1]|pan
+
+[stem][#water]|ABE	[stem][1]|boj
+[stem][?k t s p]h|ABE	[stem][1]|phoj
+[stem]q|ABE	[stem]p|poj
+[stem][?#earth]|ABE	[stem][1]|poj
+
+[stem][#water]|CAU	[stem][1]|dal
+[stem][?k t s p]h|CAU	[stem][1]|thal
+[stem]q|CAU	[stem]t|tal
+[stem][?#earth]|CAU	[stem][1]|tal
+
+[stem][#water]|TER	[stem][1]|gul
+[stem][?k t s p]h|TER	[stem][1]|khul
+[stem]q|TER	[stem]k|kul
+[stem][?#earth]|TER	[stem][1]|kul
+
+[stem][#C]|TOP	[stem][1]|ebekh
+[stem]|TOP	[stem]|tebekh
+
+[stem][#water]|TMP	[stem][1]|deru
+[stem][?k t s p]h|TMP	[stem][1]|theru
+[stem]q|TMP	[stem]t|teru
+[stem][?#earth]|TMP	[stem][1]|teru
+
+// Verbal subordinators
+
+[stem][#velar]|REL&P	[stem]g|lek || [stem]g|lut || [stem]g|lyl || [stem]g|lyp
+[stem][#dental]|REL&P	[stem]d|lek || [stem]d|lut || [stem]d|lyl || [stem]d|lyp
+[stem][#alveo]|REL&P	[stem]l|lek || [stem]l|lut || [stem]l|lyl || [stem]l|lyp
+[stem][#labial]|REL&P	[stem]b|lek || [stem]b|lut || [stem]b|lyl || [stem]b|lyp
+[stem]|REL&P	[stem]|lek || [stem]|lut || [stem]|lyl || [stem]|lyp
+
+[stem][#velar]|REL&A	[stem]k|kylek || [stem]k|kyt || [stem]k|kylle || [stem]k|kylyp
+[stem][#dental]|REL&A	[stem]t|kylek || [stem]t|kyt || [stem]t|kylle || [stem]t|kylyp
+[stem][#alveo]|REL&A	[stem]r|kylek || [stem]r|kyt || [stem]r|kylle || [stem]r|kylyp
+[stem][#labial]|REL&A	[stem]p|kylek || [stem]p|kyt || [stem]p|kylle || [stem]p|kylyp
+[stem]|REL&A	[stem]|krek || [stem]|kyt || [stem]|kylle || [stem]|kryp
+
+[stem][#velar]|ARG&FAC&P	[stem]k|tel
+[stem][#dental]|ARG&FAC&P	[stem]t|tel
+[stem][#alveo]|ARG&FAC&P	[stem]r|tel
+[stem][#labial]|ARG&FAC&P	[stem]p|tel
+[stem]|ARG&FAC&P	[stem]|tel
+
+[stem][#velar]|ARG&INT&P	[stem]k|tagel
+[stem][#dental]|ARG&INT&P	[stem]t|tagel
+[stem][#alveo]|ARG&INT&P	[stem]r|tagel
+[stem][#labial]|ARG&INT&P	[stem]p|tagel
+[stem]|ARG&INT&P	[stem]|tagel
+
+[stem][#velar]|ARG&FAC&A	[stem]k|turyn
+[stem][#dental]|ARG&FAC&A	[stem]t|turyn
+[stem][#alveo]|ARG&FAC&A	[stem]r|turyn
+[stem][#labial]|ARG&FAC&A	[stem]p|turyn
+[stem]|ARG&FAC&A	[stem]|turyn
+
+[stem][#velar]|ARG&INT&A	[stem]k|turyk
+[stem][#dental]|ARG&INT&A	[stem]t|turyk
+[stem][#alveo]|ARG&INT&A	[stem]r|turyk
+[stem][#labial]|ARG&INT&A	[stem]p|turyk
+[stem]|ARG&INT&A	[stem]|turyk

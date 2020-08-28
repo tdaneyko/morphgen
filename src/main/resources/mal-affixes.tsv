@@ -1,0 +1,21 @@
+[n] PL (NOM || ACC || DAT || GEN || SOC || INS || LOC)
+
+[prn] (NOM || ACC || DAT || GEN || SOC || INS || LOC)
+
+[fprn] (NOM || ACC || DAT || GEN || SOC || INS || LOC)
+
+[v] PASS (((PRS || PST) (Nn || Nn&PL || Nm || Nf || Nhum&PL) || PST_STAT || FUT || HAB || INT || POT || DES || HOR) (NEG PAM || NEG_QPRT || A) || GER || PERM || IMP)
+
+[a] Nn
+
+(+1&*100 || +2|*100 || +3|*100 || +4|*100 || +5|*100 || +6|*100 || +7|*100 || +8|*100) (+1&*10 || +2|*10 || +3|*10 || +4|*10 || +5|*10 || +6|*10 || +7|*10 || +8|*10 || +9&*10) [num1]
+
+(+1&*100 || +2|*100 || +3|*100 || +4|*100 || +5|*100 || +6|*100 || +7|*100 || +8|*100) [num10]
+
+
+
+[ntest] PL (NOM || ACC || DAT || GEN || SOC || INS || LOC)
+
+[vtest] ((PRS || PST || PST_STAT || HAB || INT || DES || HOR) (NEG || A) || GER || IMP || NEG PAM)
+
++2 *10 [numtest]
